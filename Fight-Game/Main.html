@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fighting Game</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!----OUTTER CONTAINER DIV---->
+    <div style="position: relative; display: inline-block">
+      <!----SMALLER OUTTER CONTAINER DIV---->
+      <div
+        style="
+          position: absolute;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding: 20px;
+        "
+      >
+        <!----PLAYER HEALTH---->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 4px solid #171717;
+            border-left: 4px solid #171717;
+            border-bottom: 4px solid #171717;
+          "
+        >
+          <div
+            style="background-color: #dc2626; height: 40px; width: 100%"
+          ></div>
+          <div
+            id="playerHealth"
+            style="
+              position: absolute;
+              background-color: #15803d;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              width: 100%;
+            "
+          ></div>
+        </div>
+        <!----TIMER---->
+        <div
+          id="timer"
+          style="
+            background-color: #171717;
+            height: 50px;
+            width: 100px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #dc2626;
+            border: 4px solid #171717;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+          "
+        >
+          10
+        </div>
+        <!----ENEMY HEALTH---->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            border-top: 4px solid #171717;
+            border-right: 4px solid #171717;
+            border-bottom: 4px solid #171717;
+          "
+        >
+          <div style="background-color: #dc2626; height: 40px"></div>
+          <div
+            id="enemyHealth"
+            style="
+              position: absolute;
+              background-color: #15803d;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+            "
+          ></div>
+        </div>
+        <div></div>
+      </div>
+      <div
+        id="outcomeText"
+        style="
+          position: absolute;
+          color: white;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: none;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 50px;
+        "
+      >
+        Outcome
+      </div>
+      <canvas></canvas>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/utility.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/Game.js"></script>
+  </body>
+</html>
